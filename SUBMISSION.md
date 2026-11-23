@@ -9,7 +9,7 @@ Official instructions: https://docs.obsidian.md/Themes/App%20themes/Submit%20you
 - [x] Original `theme.css` with light/dark mode variables and Obsidian-native layout.
 - [x] Root `manifest.json`, `README.md`, `LICENSE`, attribution and Linux instructions.
 - [x] Two real light-mode screenshots in `screenshots/` and in the README.
-- [ ] Release **0.4.1** with downloadable `theme.css` and `manifest.json`.
+- [x] Release **0.4.1** with downloadable `theme.css` and `manifest.json`.
 - [x] Obsidian Community account linked to GitHub **vict0rg**.
 
 ## Official review
