@@ -1,0 +1,30 @@
+name: Validate and release Cupertino Soft
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify CSS and manifest
+        run: node scripts/check-theme.mjs
+      - name: Validate required files
+        run: test -s theme.css && test -s manifest.json && test -s LICENSE
+      - name: Publish release for Obsidian
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          VERSION=$(node -p "require('./manifest.json').version")
+          if gh release view "$VERSION" >/dev/null 2>&1; then
+            echo "Release $VERSION exists"
+          else
+            gh release create "$VERSION" theme.css manifest.json \
+              --target "$GITHUB_SHA" \
+              --title "Cupertino Soft $VERSION" \
+              --notes-file RELEASE_NOTES.md
+          fi
