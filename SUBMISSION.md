@@ -15,13 +15,14 @@ Official instructions: https://docs.obsidian.md/Themes/App%20themes/Submit%20you
 ## Official review
 
 - [ ] Verify dark mode and optional landscape screenshot (recommended 512×288).
-- [ ] Owner reviews [Developer policies](https://docs.obsidian.md/community-directory/developer-policies), accepts the policy and maintenance commitment.
-- [ ] Submit under **Themes → New theme** with:
+- [x] Owner reviewed [Developer policies](https://docs.obsidian.md/community-directory/developer-policies), accepted the policy and maintenance commitment.
+- [x] Submit under **Themes → New theme** with:
   - GitHub repository: https://github.com/vict0rg/cupertino-soft
   - Owner: Myself
   - Screenshot path: `screenshots/cupertino-soft-light-typography.png`
   - Supported modes: Light, Dark
-- [ ] Resolve any automated review feedback and await publication.
+- [ ] Automated review in progress; resolve any findings before final publication.
+- [ ] Publish the listing in the Obsidian dashboard and confirm that it becomes installable.
 
 The name and visual inspiration acknowledge [svnaxis's Cupertino](https://github.com/svnaxis/obsidian-cupertino), but this is an independently authored stylesheet and a new repository, not a republished fork.
 
